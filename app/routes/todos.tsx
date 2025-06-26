@@ -55,7 +55,7 @@ export default function TodoList() {
     const { todos, email } = useLoaderData<typeof loader>();
     const [selectedTodo, setSelectedTodo] = useState<{ id: number; text: string; body: string } | null>(null);
     const [selectedForm, setSelectedForm] = useState(false);
-    const navigaet = useNavigate()
+    const navigate = useNavigate()
 
     return (
 
@@ -67,7 +67,7 @@ export default function TodoList() {
                     </h1>
                     <div>{email}</div>
                     <button
-                        onClick={() => navigaet("/logout")}
+                        onClick={() => navigate("/logout")}
                         type="submit"
                         className="rounded bg-slate-600 px-4 py-2 text-blue-100 hover:bg-blue-500 active:bg-blue-600"
                     >
